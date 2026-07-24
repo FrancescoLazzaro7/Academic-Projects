@@ -1,0 +1,9 @@
+# Controller Parameters
+/controller_node/epsilon: 0.2
+/controller_node/a: 10.0
+/controller_node/T: 5.0
+/controller_node/dt: 0.001   # Nominal sampling time; actual PI step uses /state timestamps
+
+# PI Tuning (Starting: Kp=2.0, Ti=0.5)
+/controller_node/Kp: 4.0
+/controller_node/Ti: 0.5

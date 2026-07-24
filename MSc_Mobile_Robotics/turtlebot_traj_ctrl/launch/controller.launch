@@ -1,0 +1,13 @@
+<launch>
+  <param name="/use_sim_time" value="true" />
+
+  <rosparam file="$(find turtlebot_simulator)/config/ode_simulator_params.yaml" command="load" />
+  <node pkg="turtlebot_simulator" type="robot_simulator" name="robot_simulator" output="screen" />
+
+  <rosparam file="$(find turtlebot_traj_ctrl)/config/controller_params.yaml" command="load" />
+  <node pkg="turtlebot_traj_ctrl" type="controller_node" name="controller_node" output="screen" />
+
+  <node pkg="rosbag" type="record" name="recorder" 
+        args="-O $(find turtlebot_traj_ctrl)/control_result.bag /state /trajectory /cmd --duration=30" 
+        output="screen"/>
+</launch>

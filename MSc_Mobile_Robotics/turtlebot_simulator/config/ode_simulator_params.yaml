@@ -1,0 +1,8 @@
+# Simulation parameters
+/robot_simulator/dt: 0.001       # Integration step size
+/robot_simulator/Ta: 0.050       # Actuator Time Constant [s]
+
+# Initial state
+/robot_simulator/x0: 0.0
+/robot_simulator/y0: 0.0
+/robot_simulator/theta0: 0.0
